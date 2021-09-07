@@ -1,0 +1,474 @@
+*,
+*::after,
+*::before{
+   box-sizing: border-box;
+   margin:0;
+   padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+   --clr-dark:#130F49;
+   --clr-light:#ffffff;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Euclid Circular B Regular'), url('fonts/Euclid Circular B Regular.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'Euclid Circular B Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Euclid Circular B Light'), url('fonts/Euclid Circular B Light.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'Euclid Circular B Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Euclid Circular B Medium'), url('fonts/Euclid Circular B Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Euclid Circular B SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Euclid Circular B SemiBold'), url('fonts/Euclid Circular B SemiBold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Euclid Circular B Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Euclid Circular B Bold'), url('fonts/Euclid Circular B Bold.woff') format('woff');
+    }
+    
+body{
+    margin: 0;
+    font-family:'Euclid Circular B Regular';
+    color: var(--clr-dark);
+}
+header{
+    padding:0 10rem;
+    display: flex;
+    align-items: center;
+    margin-top: 4.2rem;
+    position: absolute;
+    top: 0;
+}
+.logo{
+    margin-right: 11.2rem;
+ 
+    cursor: pointer;
+  
+    font-family: 'Euclid Circular B Bold';
+    font-size: 24px;
+    display: inline-block;
+    transition: all .5s ease-in-out;
+}
+.logo:hover{
+    text-shadow: 0 0 5px rgba(128, 128, 128, 0.37);
+    letter-spacing: 2px;
+}
+.applink{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-dark);
+    font-family: 'Euclid Circular B Medium';
+    font-size: 1.8rem;
+    padding: 1.8rem 2.9rem;
+    border: 1px solid #E6E6E6;
+    border-radius: 16px;
+    transition: all .3s ease-in-out;
+    
+}
+.applink:hover{ 
+    background:#E6E6E6;
+    color: var(--clr-light);
+}
+.applink img{
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* start now section */
+.start-now{
+   
+    display: grid;
+    grid-template-columns: minmax(2rem,28rem) 1fr 1fr;
+}
+.start-now-text{
+  grid-column: 2/3;
+  margin-top: 30.6rem;
+}
+.start-now-image{
+    grid-column: 3/4;
+    position: relative;
+    width: 100%;
+ 
+}
+.start-now-image .back{
+    position: absolute;
+    width: 100%;
+}
+.start-now-image .front{
+    position: absolute;
+    width: 100%;
+    right:10%;
+    animation-name: front;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes front {
+    from{
+        transform: rotate(-3deg);
+    }
+    to{
+        transform: rotate(3deg);
+    }
+}
+
+
+.start-now-heading{
+    font-family: "Euclid Circular B Bold";
+    font-size: 9rem;
+    line-height: 8.5rem;
+}
+.start-now-desc{
+    font-family: 'Euclid Circular B Regular';
+    font-size: 2.6rem;
+    margin: 3.6rem 0;
+    animation-name: start-now;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes start-now {
+    from{
+        transform: translateY(-5px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+.start-now-btn{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 2.9rem 5rem;
+    font-family: 'Euclid Circular B Regular';
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    border: 2px solid var(--clr-dark);
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
+.start-now-btn:hover{
+    background-color: transparent;
+    color: var(--clr-dark);
+}
+.section{
+    width: 65%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 14.2rem;
+    align-items: center;
+}
+
+/* target section */
+.target{
+    margin-top: 36.8rem;
+    margin-bottom: 22.1rem;
+}
+.target-image{
+ width: 100%;
+}
+.target-text-heading{
+    font-family: 'Euclid Circular B Medium';
+    font-size: 6.8rem;
+    line-height: 6.3rem;
+  
+}
+.target-text-desc{
+    font-family: 'Euclid Circular B Regular';
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin: 4.1rem 0;
+   opacity: 0.4;
+}
+
+.target-btn img{
+    transform: scale(100%);
+    transition: all .5s ease-in-out;
+}
+.target-btn img:hover{
+    transform: scale(90%);
+}
+
+/* track section */
+.track{
+    background: url('images/trackbg.svg') no-repeat;
+    background-position: left 45%;
+    background-size:55%;
+    
+} 
+.tract-text-bg{
+    position: absolute;
+    
+} 
+.track-images{
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 2.1rem 2.1rem;
+    margin-left: 8.8rem;
+    margin-bottom: 25rem;
+}
+.track-images img:nth-of-type(2),
+.track-images img:nth-of-type(4){
+    transform: translateY(3rem);
+}
+.track-heading{
+    font-family: 'Euclid Circular B Medium';
+    font-size: 8.5rem;
+    line-height: 7.6rem;
+    margin-bottom: 8.8rem;
+}
+.track-desc-heading{
+    font-family: 'Euclid Circular B Regular';
+    font-size: 4rem;
+    line-height: 5rem;
+    opacity: .3;
+}
+.track-benefits{
+    margin-top: 8.6rem;
+}
+.track-benefits > div{
+    margin-bottom: 6.4rem;
+}
+.benefit{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: start;
+    gap: 1.3rem 3.2rem;
+
+}
+.benefit img{
+    grid-row: span 2;
+    transform: translateY(-35%);
+}
+.benefit-heading{
+    font-family: "Euclid Circular B Bold";
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    
+}
+.benefit-desc{
+    font-family: 'Euclid Circular B Regular';
+    font-size: 2rem;
+    line-height: 2.8rem;
+    opacity: .3;
+}
+
+/* calories section */
+.calories{
+    margin-top: 34.7rem;
+}
+.calories-text-heading{
+    font-family: 'Euclid Circular B Medium';
+    font-size: 6.8rem;
+    line-height: 6.3rem;
+}
+.calories-text-desc{
+    font-family: 'Euclid Circular B Regular';
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    letter-spacing: -0.01em;
+    opacity: 0.4;
+    margin: 4.3rem 0;
+}
+.calories-image{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.calories-image img{
+    width: 100%;
+}
+.calories-text-btn img{
+    transform: scale(100%);
+    transition: all .5s ease-in-out;
+}
+.calories-text-btn img:hover{
+    transform: scale(90%);
+}
+
+/* brands section */
+.brands{
+    margin: 11.1rem auto;
+}
+.brands img{
+    width: 100%;
+    grid-column: span 2;
+}
+
+/* join section */
+.join{
+    background: #D9F4FF;
+    border-radius: 56px;
+    width: 84.75%;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    overflow: hidden;
+}
+.join-heading{
+    font-family: 'Euclid Circular B Regular';
+    font-size: 6.8rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 5rem;
+    margin-top: 10rem;
+}
+.joinbtn{
+    margin-bottom: 10rem;
+    cursor: pointer;
+    transform: scale(100%);
+    transition: all .5s ease-in-out;
+}
+.joinbtn:hover{
+    transform: scale(90%);
+}
+.join-image{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.join-image img{
+    width: 100%;
+}
+
+/* media queries */
+@media screen and (max-width:1400px){
+    html{
+        font-size: 53%;
+    }
+}
+
+@media screen and (max-width:992px){
+    html{
+        font-size: 45%;
+    }
+    .section{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 14.2rem;
+        align-items: center;
+    }
+
+    .start-now{
+        grid-template-columns: minmax(2rem,15rem) 1fr 1fr;
+    }
+    .target{
+        margin-top: 36.8rem;
+        margin-bottom: 22.1rem;
+    }
+    .brands{
+        margin: 10rem auto;
+    }
+    .join-heading{
+        margin-top: 5rem;
+    }
+    .joinbtn{
+        margin-bottom: 0rem;
+    }
+    .join-image img{
+        width:100%;
+        align-self:end;
+        justify-self: end;
+        transform: translateY(10px);
+      }
+}
+@media screen and (max-width:768px){
+ 
+    .section{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 14.2rem;
+        align-items: center;
+    }
+    header{
+        flex-direction: column;
+    }
+    header{
+        padding:0 3rem;
+        align-items: flex-start;
+    }
+    .logo{
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+    .target{
+        margin-top: 15rem;
+        margin-bottom: 22.1rem;
+    }
+    .track{
+        background: url('images/trackbg.svg') no-repeat;
+        background-position: left -10rem;
+        background-size:90%;
+        
+    }
+    
+    .track-images{
+        
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .start-now{
+        grid-template-columns: minmax(2rem,10rem) 1fr 1fr;
+    }
+    .start-now-image{
+       grid-column: 2/4;
+       grid-row: 1/2;
+       
+    }
+    .start-now-text{
+       margin-right: 2rem;
+       grid-column: 2/3;
+       grid-row: 2/3;
+    }
+     .start-now-image .back{
+        position: absolute;
+        width: 50%;
+        right: 0;
+    }
+    .start-now-image .front{
+        position: absolute;
+        width: 50%;
+        right: 0;
+    }
+    .brands{
+        margin: 10rem auto;
+    }
+}
+@media screen and (max-width:540px) {
+    .track{
+        background-position: left 25rem;
+        background-size:95%;
+    }
+}
